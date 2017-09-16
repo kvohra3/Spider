@@ -17,7 +17,7 @@ app.get('/scrape', function(req, res){
     if(!err) {
 
       //cherrio -> jQuery func on html
-      var $ = cherrio.load(html);
+      var $ = cheerio.load(html);
 
       //define variable to capture
       var title, release, rating;
