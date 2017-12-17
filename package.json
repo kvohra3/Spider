@@ -4,6 +4,9 @@
   "description"  : "Scrape Web.",
   "main"         : "server.js",
   "author"       : "Karan Vohra",
+  "scripts": {
+    "start": "node ./server.js"
+  },
   "dependencies" : {
     "express"    : "4.15.4",
     "request"    : "2.81.0",
