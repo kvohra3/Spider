@@ -11,15 +11,43 @@ url = 'https://www.reddit.com/r/Fantasy_Football/';
   //Structre of request call:
   //1st param: URL
   //callback func -> 3 params: err, response status, and html
-request(url, function(err, response, html) {
+request(url, function(err, response, html) { 
 
     //first check no errors occured with request
     if(!err) {
       var $ = cheerio.load(html);
       links = $('a'); //jquery get all hyperlinks
+      let count = 0;
       $(links).each(function(i, link){
-        console.log(i+') '+ $(link).text() + ': ' + $(link).attr('href'));
-        console.log(); 
+        console.log('link' + link);
+        let key = $(link).text();        
+        let alink = $(link).attr('href');
+
+        count++;
+        // console.log(count + ') ' + 'key: ', key, ": ", alink);
+        // if(alink.includes('r/Fantasy_Football/')) {
+        //   console.log(count + ') ' + 'key: ', key, ": ", alink);
+        // };
+        // if (alink.includes('r/Fantasy_Football')) {
+        //   console.log('alink: ', alink, typeof alink);
+        // } else {
+        //   console.log('or nah');
+        // }
+        
+        
+        // console.log('alink.slice: ', alink.slice(30));
+
+        // let link_r = alink.slice(23,41);
+
+        // if (link_r === 'r/Fantasy_Football') {
+        //   console.log('link_r: ', link_r);
+        //   title = alink.slice(42);
+        //   console.log('title: ', title);
+        // }
+        // console.log('key: ', key);
+        // console.log('test' + test);
+        // console.log(i+') '+ $(link).text() + ': ' + $(link).attr('href'));
+        // console.log(); 
       });
     }
   })
