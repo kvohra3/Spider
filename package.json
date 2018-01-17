@@ -1,15 +1,16 @@
 {
-  "name"         : "Spider",
-  "version"      : "0.0.1",
-  "description"  : "Scrape Web.",
-  "main"         : "server.js",
-  "author"       : "Karan Vohra",
+  "name": "Spider",
+  "version": "0.0.1",
+  "description": "Scrape Web.",
+  "main": "src/server.js",
+  "author": "Karan Vohra",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node src/server"
   },
-  "dependencies" : {
-    "express"    : "4.15.4",
-    "request"    : "2.81.0",
-    "cheerio" : "1.0.0-rc.2"
+  "dependencies": {
+    "cheerio": "1.0.0-rc.2",
+    "express": "4.15.4",
+    "request": "2.81.0",
+    "url-parse": "^1.2.0"
   }
 }
